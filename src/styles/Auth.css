@@ -1,0 +1,116 @@
+.auth-page {
+  min-height: calc(100vh - 4.5rem - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background-alt);
+  padding: var(--space-4) 0;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 0 var(--space-2);
+}
+
+.auth-card {
+  background-color: white;
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: var(--space-1);
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.auth-error {
+  background-color: rgba(211, 47, 47, 0.1);
+  color: var(--color-error);
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-3);
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.auth-button {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--space-2);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-normal);
+  margin-top: var(--space-1);
+}
+
+.auth-button:hover {
+  background-color: var(--color-primary-light);
+}
+
+.auth-footer {
+  margin-top: var(--space-3);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.auth-footer a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+.auth-card {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .auth-card {
+    padding: var(--space-3);
+  }
+  
+  .auth-button {
+    padding: 0.75rem var(--space-2);
+  }
+}

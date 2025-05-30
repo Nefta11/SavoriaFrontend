@@ -1,0 +1,126 @@
+.about-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-hero-content h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: var(--space-1);
+}
+
+.story-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.story-text {
+  padding: var(--space-2);
+}
+
+.story-text p {
+  margin-bottom: var(--space-2);
+}
+
+.story-image {
+  height: 400px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.story-image:hover img {
+  transform: scale(1.05);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: var(--space-2);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal);
+}
+
+.team-member:hover img {
+  transform: scale(1.05);
+}
+
+.team-member h3 {
+  margin-bottom: var(--space-1);
+}
+
+.team-member p {
+  color: var(--color-text-muted);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .story-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .story-text {
+    order: 2;
+  }
+
+  .story-image {
+    order: 1;
+    height: 300px;
+  }
+
+  .philosophy-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+  }
+
+  .about-hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
